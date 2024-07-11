@@ -1,15 +1,12 @@
-import './App.css';
 import React from 'react';
-import MapboxMap from './components/mapboxMap/mapboxMap';
-import MapboxMapSupercluster from './components/mapboxMap/mapboxMapSupercluster';
+import MapboxMapReactMapGl from './components/mapboxMap/mapboxMapReactMapGl';
+import ReactMapGLTest from './components/mapboxMap/reactMapboxGlTest';
 
 function App() {
   return (
     <div className="App">
-      <main>
-        {/* <MapboxMap /> */}
-        <MapboxMapSupercluster />
-      </main>
+       <ReactMapGLTest />
+        {/* <MapboxMapReactMapGl /> */}
     </div>
   );
 }
