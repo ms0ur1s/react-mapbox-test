@@ -1,12 +1,14 @@
 import './App.css';
 import React from 'react';
 import MapboxMap from './components/mapboxMap/mapboxMap';
+import MapboxMapSupercluster from './components/mapboxMap/mapboxMapSupercluster';
 
 function App() {
   return (
     <div className="App">
       <main>
-        <MapboxMap />
+        {/* <MapboxMap /> */}
+        <MapboxMapSupercluster />
       </main>
     </div>
   );
