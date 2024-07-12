@@ -1,6 +1,6 @@
 import React from 'react';
-import MapboxMapReactMapGl from './components/mapboxMap/mapboxMapReactMapGl';
-import ReactMapGLTest from './components/mapboxMap/reactMapboxGlTest';
+import MapboxMapReactMapGl from './components/map/mapboxMap/mapboxMapReactMapGl';
+import ReactMapGLTest from './components/map/mapboxMap/reactMapboxGlTest';
 
 function App() {
   return (

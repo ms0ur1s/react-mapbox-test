@@ -7,6 +7,7 @@ const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN; // Set your mapb
 const ReactMapGLTest = () => {
   const mapRef = useRef(null);
   const [geojsonData, setGeojsonData] = useState(null);
+  const [zoom, setZoom] = useState(1.45);
 
   const generateMarkers = (count) => {
     const minLat = -55,
@@ -39,6 +40,10 @@ const ReactMapGLTest = () => {
   }, []);
 
   const onClick = (event) => {
+    if (!event.features || event.features.length === 0) {
+      return;
+    }
+
     const feature = event.features[0];
     const clusterId = feature.properties.cluster_id;
 
@@ -55,6 +60,12 @@ const ReactMapGLTest = () => {
         duration: 500,
       });
     });
+  };
+
+  const onZoom = (event) => {
+    const newZoom = event.viewState.zoom;
+    setZoom(newZoom);
+    console.log("Current zoom level:", newZoom);
   };
 
   const clusterLayer = {
@@ -106,16 +117,26 @@ const ReactMapGLTest = () => {
     <>
       <Map
         initialViewState={{
-          latitude: 40.67,
-          longitude: -103.59,
-          zoom: 1.4,
+          latitude: 20,
+          longitude: -20,
+          zoom: 1.6,
         }}
         mapStyle="mapbox://styles/mapbox/streets-v11"
         mapboxAccessToken={MAPBOX_TOKEN}
         interactiveLayerIds={[clusterLayer.id]}
         onClick={onClick}
+        onZoom={onZoom}
         ref={mapRef}
         style={{ width: "100vw", height: "100vh", position: "fixed" }}
+        minZoom={1.6} // Set the minimum zoom level
+        maxZoom={15} // Set the maximum zoom level
+        minPitch={0} // Set the minimum pitch
+        maxPitch={60} // Set the maximum pitch
+        maxBounds={[
+          [-180, -90], // Southwest coordinates
+          [180, 90], // Northeast coordinates
+        ]}
+        renderWorldCopies={false}
       >
         {geojsonData && (
           <Source
