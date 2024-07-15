@@ -1,0 +1,48 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "Identifier": "id1", "Name": "Slight Wheel Period" },
+      "geometry": { "type": "Point", "coordinates": [-165.32884, 55.8725] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "Identifier": "id2", "Name": "Replied Stretch Change" },
+      "geometry": { "type": "Point", "coordinates": [71.06128, 20.91977] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "Identifier": "id3", "Name": "Thick Handsome Region" },
+      "geometry": { "type": "Point", "coordinates": [56.82022, -36.70279] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "Identifier": "id4", "Name": "Group Husband Behavior" },
+      "geometry": { "type": "Point", "coordinates": [-141.52935, -33.1498] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Identifier": "id5",
+        "Name": "Position Quick Grandfather"
+      },
+      "geometry": { "type": "Point", "coordinates": [0.30864, 74.20271] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "Identifier": "id6", "Name": "Airplane Suit Perfect" },
+      "geometry": { "type": "Point", "coordinates": [118.11322, 33.24939] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "Identifier": "id7", "Name": "Count Cup Information" },
+      "geometry": { "type": "Point", "coordinates": [47.95373, 52.84021] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "Identifier": "id8", "Name": "Spent Try Drink" },
+      "geometry": { "type": "Point", "coordinates": [166.15865, 35.77453] }
+    }
+  ]
+}
